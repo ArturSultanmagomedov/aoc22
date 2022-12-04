@@ -5,9 +5,9 @@ fun main() {
 }
 
 private fun first(input: String) = input.split("\n\n").maxOf {
-    it.lines().sumOf { m -> m.toInt() }
+    it.lines().sumOf(String::toInt)
 }
 
 private fun second(input: String) = input.split("\n\n").map {
-    it.lines().sumOf { m -> m.toInt() }
+    it.lines().sumOf(String::toInt)
 }.sorted().takeLast(3).sum()
